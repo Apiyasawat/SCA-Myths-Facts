@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Triangle BG</title>
+</head>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="arrows.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 95vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #FEDBD0;
+  color: #442c2e;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  padding-bottom: 200vh;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transform: rotate(62deg);
+          transform: rotate(62deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+.slide {
+    display: none;
+}
+
+
+</style>
+
+<body>
+
+   
+    <div class="container"> 
+        <!--slide1-->
+        <div class="w3-row slide">
+                <div class="w3-col s6 w3-center" style="padding-top: 10vh; font-size: 6vh">
+                    <div class="w3-jumbo">Sudden Cardiac Death</div>
+                    <div class="w3-xxlarge">ความเชื่อและความจริง | Myth vs Facts</div>
+                </div>
+                <div class="w3-col s6" style="padding-top: 45vh; font-size: 6vh; 
+                position: relative; z-index: 1">
+                    Sudden cardiac death is....
+                </div>
+                <div class="w3-btn next"
+                style="z-index:1; position: absolute; top: 90vh; left: 49vw">
+                <a href="#"><i class="down"></i></a>
+                </div>    
+            </div>
+
+        <!--slide2-->        
+        <div class="w3-row slide">
+                <div class="w3-col s6 w3-center" style="padding-top: 10vh; font-size: 6vh">
+                    <div class="w3-jumbo">Slide 2</div>
+                    <div class="w3-xxlarge">ความเชื่อและความจริง | Myth vs Facts</div>
+                </div>
+                <div class="w3-col s6" style="padding-top: 45vh; font-size: 6vh; 
+                position: relative; z-index: 1">
+                    this is slide 2....
+                </div>
+                <div class="w3-btn next"
+                style="z-index:1; position: absolute; top: 90vh; left: 49vw">
+                <a href="#"><i class="down"></i></a>
+                </div>    
+            </div>
+
+        <!--slide3-->        
+        <div class="w3-row slide">
+                <div class="w3-col s6 w3-center" style="padding-top: 10vh; font-size: 6vh">
+                    <div class="w3-jumbo">Slide 3</div>
+                    <div class="w3-xxlarge">ความเชื่อและความจริง | Myth vs Facts</div>
+                </div>
+                <div class="w3-col s6" style="padding-top: 45vh; font-size: 6vh; 
+                position: relative; z-index: 1">
+                    Sudden cardiac death is....
+                </div>
+                <div class="w3-btn next"
+                style="z-index:1; position: absolute; top: 90vh; left: 49vw">
+                <a href="#"><i class="down"></i></a>
+                </div>    
+            </div>
+    </div>
+
+    <div class="w3-row w3-center w3-bottom" style="padding-top: 5vh; font-size: 2vw;">
+        follow us at <a href="https://www.facebook.com/HeartRhythmBox/">
+            <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity" 
+            style="color:  #3B5998; border: transparent"></i></a><br>
+        check out our collection at <a href="https://apiyasawat.github.io/main/">
+        <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity"
+        style="color: #fedbd0; border: transparent"></i></a>
+    </div>
+    
+
+<script>
+
+window.addEventListener("load",function(){showSlides()});
+
+var slideIndex = 0;
+
+function showSlides() {
+    var i;
+    var s = document.getElementsByClassName("slide");
+    for (i = 0; i < s.length; i++) {
+        s[i].style.display = "none";
+        }
+    
+    s[slideIndex].style.display = "block";
+    slideIndex++;
+    if (slideIndex==s.length) {slideIndex = 0};
+    setTimeout(showSlides,2000);
+    
+}
+
+
+
+
+</script>
+
+    
+            
+       
+
+
+
+
+
+
+
+
+</body>
+</html>
