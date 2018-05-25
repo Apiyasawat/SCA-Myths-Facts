@@ -1,4 +1,4 @@
-
+/*arrow*/
 i {
   border: solid;
   border-width: 0 0.5vw 0.5vw 0;
@@ -41,6 +41,16 @@ i {
     -webkit-transform: rotate(45deg);
 }
 
+/*text*/
 .header {font-family: 'Abel', sans-serif;}
 .largeT {font-size: 10vh;}
 .mediumT {font-size: 7vh}
+.text {font-family: 'Open Sans', sans-serif;}
+p, html {font-family: 'Open Sans', sans-serif;}
+
+/*color*/
+.pink1 {background-color: #FEDBD0}
+.pink2 {background-color: #FEEAE6}
+.brownBG {background-color: #442C2E}
+.brownTxt {color:#442C2E}
+.greyBG {background-color: #E4E4E4}
