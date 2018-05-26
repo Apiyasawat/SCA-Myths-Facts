@@ -46,6 +46,7 @@ i {
 .largeT {font-size: 10vh;}
 .mediumT {font-size: 7vh}
 .smallT {font-size: 5vh}
+.smallerT {font-size: 3vh}
 .text {font-family: 'Open Sans', sans-serif;}
 p, html {font-family: 'Open Sans', sans-serif;}
 
@@ -55,3 +56,29 @@ p, html {font-family: 'Open Sans', sans-serif;}
 .brownBG {background-color: #442C2E}
 .brownTxt {color:#442C2E}
 .greyBG {background-color: #E4E4E4}
+
+/*slideShow*/
+.container {
+    position: relative;
+    width: 100vw;
+    min-height: 95vh;
+    margin: 0 auto;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #fedbd0 50%, #ffffff 50%);
+    color: #442c2e;
+  }
+  .leftCol {padding-top: 10vh;}
+  .rightCol {
+    position: absolute;
+    top: 50vh;left: 50vw;padding: 1.5vw;}
+      
+  @media screen and (max-width: 600px) {
+      .container {
+          float: none;
+          width: 100%;
+          background: #ffffff;
+              }
+    .leftCol {background-color: #fedbd0; padding: 1vh;}
+    .rightCol {background-color: #ffffff; position: static;
+      text-align:center;padding: 1vh}
+  }
