@@ -49,9 +49,9 @@ p, html {font-family: 'Open Sans', sans-serif;}
     margin-bottom: 10vh;
     background-color: white;
 }
-.block:last-child {
+/*.block:last-child {
     margin-bottom: 20vh;
-}
+}*/
 .next {
     position: absolute;
     left: 49vw;
