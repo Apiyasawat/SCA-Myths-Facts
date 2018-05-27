@@ -2,7 +2,7 @@
 //nextBlk
 function next(n) {
     var block = document.getElementsByClassName("block");
-    block[n].scrollIntoView({behavior:"smooth", block:"start"});
+    block[n].scrollIntoView({behavior:"smooth", block:"start", inline:"start"});
 }
 
 //pointer
