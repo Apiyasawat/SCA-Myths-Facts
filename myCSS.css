@@ -4,7 +4,7 @@
 .mediumT {font-size: 7vh}
 .smallT {font-size: 5vh}
 .smallerT {font-size: 3vh}
-.tinyT {font-size: 2vh}
+.tinyT {font-size: 1.5vmax}
 .text {font-family: 'Open Sans', sans-serif;}
 p, html {font-family: 'Open Sans', sans-serif;}
 
@@ -14,6 +14,14 @@ p, html {font-family: 'Open Sans', sans-serif;}
 .brownBG {background-color: #442C2E}
 .brownTxt {color:#442C2E}
 .greyBG {background-color: #E4E4E4}
+.blueBG {background-color: #b0eae6}
+.blueTxt {color: #b0eae6}
+
+/*border*/
+.brownBorder {border: #442C2E solid 0.5vw}
+.pinkBorder {border: #FEDBD0 solid 0.5vw}
+.greyBorder {border: #E4E4E4 solid 0.5vw}
+.blueBorder {border: #b0eae6 solid 0.5vw}
 
 /*slideShow*/
 .container {
@@ -30,7 +38,7 @@ p, html {font-family: 'Open Sans', sans-serif;}
     position: absolute;
     top: 50vh;left: 50vw;padding: 1.5vw;}
       
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
       .container {
           float: none;
           width: 100%;
@@ -54,7 +62,7 @@ p, html {font-family: 'Open Sans', sans-serif;}
 }*/
 .next {
     position: absolute;
-    left: 49vw;
+    left: 98vw;
     background-color: transparent;
     color: transparent;
 }
