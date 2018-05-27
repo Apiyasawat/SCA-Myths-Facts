@@ -1,10 +1,10 @@
 /*text*/
 .header {font-family: 'Abel', sans-serif;}
-.largeT {font-size: 10vh;}
-.mediumT {font-size: 7vh}
-.smallT {font-size: 5vh}
-.smallerT {font-size: 3vh}
-.tinyT {font-size: 1.5vmax}
+.largeT {font-size: 6.5vmax;}
+.mediumT {font-size: 4.5vmax}
+.smallT {font-size: 3vmax}
+.smallerT {font-size: 2vmax}
+.tinyT {font-size: 16px}
 .text {font-family: 'Open Sans', sans-serif;}
 p, html {font-family: 'Open Sans', sans-serif;}
 
@@ -38,7 +38,7 @@ p, html {font-family: 'Open Sans', sans-serif;}
     position: absolute;
     top: 50vh;left: 50vw;padding: 1.5vw;}
       
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
       .container {
           float: none;
           width: 100%;
@@ -48,7 +48,7 @@ p, html {font-family: 'Open Sans', sans-serif;}
     .rightCol {background-color: #ffffff; position: static;
       text-align:center;padding: 1vh}
     i.noMobile {display: none}
-  }
+      }
 
 
 /*block*/
@@ -90,4 +90,9 @@ p, html {font-family: 'Open Sans', sans-serif;}
     50%{opacity: 0.7}
     100%{opacity: 1;}
     }
+
+.ref {
+    color: #b5a3a3;
+    font-size: 14px;
+       }
     
