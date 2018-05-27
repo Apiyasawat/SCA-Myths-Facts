@@ -41,9 +41,12 @@
                 <div class="w3-col s6 w3-mobile smallT rightCol" style="text-align: center; padding-right:2vw">
                     Sudden cardiac arrest is lethal and unpredictable.
                     Check out the myths and facts to see how much you really know!<br>
-                    <div>
-                    <a href="p1.html" title="Myth&Fact#1" class="w3-btn w3-round pink2 text smallerT">
-                        Get Started</a></div>
+                    <div class="smallerT w3-padding">
+                    <a href="p1.html" title="Myth&Fact#1" class="w3-btn w3-round pink2 text">
+                        Get Started</a>
+                    or <title="Conclusions" class="w3-btn w3-round pink2 text" onclick="showConclusion()">
+                        Jump to Conclusions</a>
+                    </div>
                 </div>
                 
             </div>
@@ -176,10 +179,23 @@
                 </div>
                 
             </div>
-    
-    
+         
     </div>
    
+    <!--conclusions-->
+    <div id="conclusions" class="w3-row header w3-center largeT block" 
+        style="display: none; border: #442C2E solid 0.5vw">
+        <div class="w3-row w3-padding w3-center largeT header">Conclusions </div>
+        <ul class="w3-ul mediumT header brownTxt">
+            <li class="w3-hover-opacity">SCA is ...</li>
+            <li class="w3-hover-opacity">SCA is ...</li>
+            <li class="w3-hover-opacity">SCA is ...</li>
+        </ul>
+        <i title="to the TOP" class="fas fa-arrow-circle-up w3-hover-opacity w3-right 
+        smallT" style="color: #e5e5e5; border: transparent; padding: 1vw;" onclick="window.location.reload()"></i>
+        </a>
+    </div>
+
     <div class="w3-row header" style="padding: 1vh; font-size: 2.5vh;text-align: center">
         <a href="https://www.facebook.com/HeartRhythmBox/">
             <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity" 
@@ -192,7 +208,7 @@
 
 <script>
 
-window.addEventListener("load",function(){showSlides()});
+window.addEventListener("load",function(){showSlides(0)});
 
 var slideIndex = 0;
 
@@ -208,6 +224,13 @@ function showSlides() {
     if (slideIndex==s.length) {slideIndex = 0};
     setTimeout(showSlides,3500);
     
+}
+
+function showConclusion() {
+    var elem = document.getElementById("conclusions");
+    elem.style.display = "block";
+    elem.scrollIntoView({behavior:"smooth",block:"start"})
+
 }
 
 

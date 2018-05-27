@@ -49,6 +49,9 @@ p, html {font-family: 'Open Sans', sans-serif;}
     margin-bottom: 10vh;
     background-color: white;
 }
+.block:last-child {
+    margin-bottom: 20vh;
+}
 .next {
     position: absolute;
     left: 49vw;
@@ -66,6 +69,8 @@ p, html {font-family: 'Open Sans', sans-serif;}
     cursor: pointer;
     height: 0.5em;
     width: 0.5em;
+    margin: 0 0.2em;
+    display: inline-block;
     background-color: #fc553d;
     border-radius: 50%;
     position: fixed;  
