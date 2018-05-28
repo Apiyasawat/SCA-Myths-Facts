@@ -12,6 +12,52 @@
 </script>
 
 <title>SCA Myths vs Facts #1</title>
+
+
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+  // Load the Visualization API and the corechart package.
+  google.charts.load('current', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Callback that creates and populates a data table,
+  // instantiates the pie chart, passes in the data and
+  // draws it.
+  function drawChart() {
+
+    // Create the data table.
+    var data = google.visualization.arrayToDataTable(
+    [
+      ['Rhythms', 'percentage'],  
+      ['VT followed by VF', 62.4],
+      ['Primary VF', 8.3],
+      ['Torsades de Pointes', 12.7],
+      ['Bradycardia', 16.5],
+      
+    ]);
+
+    // Set chart options
+    var options = {height: 480, chartArea: {height: '95%'},
+        titleTextStyle: {color: 'black', fontName: 'Abel', fontSize: '32'},
+        fontName: 'Open Sans', fontSize: "22",
+        legend: 'none', pieSliceText: 'label', pieStartAngle: '170',
+        pieSliceTextStyle: {fontName: 'Abel', fontSize: '20'},
+        tooltip: {text: 'percentage'}
+        
+        };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('pieChart'));
+    chart.draw(data, options);
+  }
+  window.addEventListener("resize", drawChart);
+
+</script>
+
 </head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,8 +98,8 @@
     <!--1Block-->
     <div id="1Blk" class="w3-cell-row block greyBorder greyBG w3-mobile">
         <div class="w3-content w3-btn next" onmouseover="next(1)"></div>
-            <div class="w3-container w3-cell w3-center w3-mobile w3-padding">
-            <img src="figures/p1/apple_orange_poster.jpg" style="max-height: 90vh">
+            <div class="w3-container w3-cell w3-cell-middle w3-center w3-mobile w3-padding">
+            <img src="figures/p1/apple_orange_poster.jpg">
             </div>
             <div class="w3-container w3-cell w3-cell-middle w3-mobile pink2" 
             style="padding: 0vh 2vw 0vw 2vw">
@@ -68,7 +114,7 @@
                 
                 <span class="ref w3-mobile">
                     <a href="https://www.nhlbi.nih.gov/health-topics/sudden-cardiac-arrest">
-                    (https://www.nhlbi.nih.gov/health-topics/sudden-cardiac-arrest)
+                    (NHLBI - Sudden Cardiac Arrest Health Topics)
                 </a>
             </span></div>
             </div>
@@ -76,18 +122,25 @@
         </div>
     
     <!--2Block-->
-    <div class="w3-row block">
+    <div class="w3-cell-row block">
             <div class="w3-btn next" onmouseover="next(2)"></div>
-            <div class="w3-col s6 w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                Incidence of SCA <br><br><br><br><br><br>
+            <div class="w3-col s4 w3-mobile blueBG header mediumT">
+                Incidence of SCA 
             </div>
-            <div class="w3-col s6 w3-center w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                    Incidence of SCA
-                </div>
+            <div class="w3-col s8 w3-padding w3-mobile w3-center header smallT blueBorder" >
+                    Mechanisms of production of fatal arrhythmia on the basis of data from 157 cases.  
+                <div id="pieChart" class="w3-padding chartWrap w3-center"></div>
+                 
+                <a href="https://www.ncbi.nlm.nih.gov/pubmed/2911968" class="ref">
+                    Ref: de Luna A, et al. Am Heart J. 1989.</a>    
+                   
+            </div>
                 
             </div>
     </div>
-    <div class="w3-row w3-center block header tinyT">
+
+    <!--before bottom-->
+    <div class="w3-row w3-center block header tinyT w3-mobile">
         <a href="#top"><i title="to the TOP" class="fas fa-arrow-circle-up w3-hover-opacity 
         smallT" style="color: #e5e5e5; border: transparent;text-align: center"></i></a>
         <br>
@@ -126,6 +179,7 @@
     
 
 <script src="littleJF.js"></script>
+
 <script>
 window.addEventListener("keydown", function(event) {
         event.preventDefault();
@@ -135,6 +189,8 @@ window.addEventListener("keydown", function(event) {
     })
     
 </script>
+
+
 
     
             
