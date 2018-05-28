@@ -41,11 +41,12 @@
     ]);
 
     // Set chart options
-    var options = {height: 480, chartArea: {height: '95%'},
+    var options = {height: 500, chartArea: {height: '80%', width: '100%'},
         titleTextStyle: {color: 'black', fontName: 'Abel', fontSize: '32'},
         fontName: 'Open Sans', fontSize: "22",
-        legend: 'none', pieSliceText: 'label', pieStartAngle: '170',
-        pieSliceTextStyle: {fontName: 'Abel', fontSize: '20'},
+        legend: {position: 'bottom', textStyle: {fontSize: 16}}, 
+        pieSliceText: 'label', pieStartAngle: '170',
+        pieSliceTextStyle: {fontName: 'Abel', fontSize: '18'},
         tooltip: {text: 'percentage'}
         
         };
@@ -54,7 +55,7 @@
     var chart = new google.visualization.PieChart(document.getElementById('pieChart'));
     chart.draw(data, options);
   }
-  window.addEventListener("resize", drawChart);
+window.addEventListener("resize", function(){drawChart()});
 
 </script>
 
@@ -124,11 +125,16 @@
     <!--2Block-->
     <div class="w3-cell-row block">
             <div class="w3-btn next" onmouseover="next(2)"></div>
-            <div class="w3-col s4 w3-mobile blueBG header mediumT">
-                Incidence of SCA 
+            <div class="w3-container w3-cell w3-center w3-cell-middle w3-mobile blueBG header">
+                <span class="smallT">More than</span> <br>
+                <span class="largeT">80% </span><br>
+                <span class="smallT">of sudden cardiac death <br>
+                    started with ventricular arrhythmias.</span>
             </div>
-            <div class="w3-col s8 w3-padding w3-mobile w3-center header smallT blueBorder" >
-                    Mechanisms of production of fatal arrhythmia on the basis of data from 157 cases.  
+            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile w3-center header smallT blueBorder" >
+                <div class="w3-content w3-border-bottom" style="line-height: 120%">Mechanisms of production of fatal arrhythmia</div>
+                <div class="w3-content smallerT">Data from 157 ambulatory patients who died while
+                        wearing holter monitoring devices. </div>  
                 <div id="pieChart" class="w3-padding chartWrap w3-center"></div>
                  
                 <a href="https://www.ncbi.nlm.nih.gov/pubmed/2911968" class="ref">
@@ -145,11 +151,12 @@
         smallT" style="color: #e5e5e5; border: transparent;text-align: center"></i></a>
         <br>
         <a href="https://www.facebook.com/HeartRhythmBox/">
-            <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity" 
-            style="color:  #3B5998; border: transparent;"></i></a><strong>HeartRhythmBox</strong>
-         | Check out our collection at <a href="https://apiyasawat.github.io/main/">
-        <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity"
+            <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity w3-mobile" 
+            style="color:  #3B5998; border: transparent;"></i></a><strong>HeartRhythmBox&nbsp </strong>
+         <a href="https://apiyasawat.github.io/main/">
+        <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity w3-mobile"
         style="color: #fedbd0; border: transparent;"></i></a>
+        Our collection
     </div>
 
 <!--bottom-->
