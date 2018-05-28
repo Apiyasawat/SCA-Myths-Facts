@@ -10,10 +10,10 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 
 /*color*/
 .darkPink {background-color: #FE9575}
+.darkPTxt {color: #FE9575}
 .pink1 {background-color: #FEDBD0}
 .pink2 {background-color: #FEEAE6}
-.liBrown {background-color: #8d7973}
-.brownBG {background-color: #442C2E}
+.brownBG {background-color: #442C2E; color: #FE9575}
 .brownTxt {color:#442C2E}
 .greyBG {background-color: #E7E7E7}
 .blueBG {background-color: #f3fcff}
@@ -26,6 +26,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 .pinkBorder {border: #FEDBD0 solid 0.5vw}
 .greyBorder {border: #E4E4E4 solid 0.5vw}
 .blueBorder {border: #f3fcff solid 0.5vw}
+.darkPBorder {border: #FE9575 solid 0.5vw}
 
 /*slideShow*/
 .container {
@@ -64,6 +65,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
     .noMobile {display: none}
     .smallerT {font-size: 16px;}
     .ref {font-size: 10px;}
+   
       }
 
 
@@ -113,7 +115,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
        }
 
 img {
-    max-height: 90vh
+    width: 100%;
 }
 
 .chartWrap {

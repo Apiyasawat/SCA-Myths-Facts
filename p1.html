@@ -100,7 +100,7 @@ window.addEventListener("resize", function(){drawChart()});
     <div id="1Blk" class="w3-cell-row block greyBorder greyBG w3-mobile">
         <div class="w3-content w3-btn next" onmouseover="next(1)"></div>
             <div class="w3-container w3-cell w3-cell-middle w3-center w3-mobile w3-padding">
-            <img src="figures/p1/apple_orange_poster.jpg">
+            <img src="figures/p1/apple_orange_poster.jpg" style="width: auto; height: 90vh">
             </div>
             <div class="w3-container w3-cell w3-cell-middle w3-mobile pink2" 
             style="padding: 0vh 2vw 0vw 2vw">
@@ -122,9 +122,24 @@ window.addEventListener("resize", function(){drawChart()});
         
         </div>
     
+
+
     <!--2Block-->
+    <div id="1Blk" class="w3-row w3-padding block w3-mobile">
+        <div class="w3-content w3-btn next" onmouseover="next(2)"></div>
+        <div class="w3-display-container w3-mobile brownBorder">
+        <img src="figures/p1/PVT.png">
+        <div class="w3-display-bottomleft brownBG darkPTxt w3-mobile header smallT" style="text-align: center" >
+            Typical event begins with VT which later turns to VF,
+            and, if not treated, asystole and death.
+        </div></div>
+    </div>    
+
+
+
+    <!--3Block-->
     <div class="w3-cell-row block">
-            <div class="w3-btn next" onmouseover="next(2)"></div>
+            <div class="w3-btn next" onmouseover="next(3)"></div>
             <div class="w3-container w3-cell w3-center w3-cell-middle w3-mobile blueBG header">
                 <span class="smallT">More than</span> <br>
                 <span class="largeT">80% </span><br>
@@ -145,10 +160,10 @@ window.addEventListener("resize", function(){drawChart()});
             </div>
    
 
-    <!--3Block-->
+    <!--4Block-->
     <div class="w3-cell-row block">
-            <div class="w3-btn next" onmouseover="next(3)"></div>
-            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile green header">
+            <div class="w3-btn next" onmouseover="next(4)"></div>
+            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile pink2 header">
                 <div class="largeT w3-center" style="line-height: 80%">3 millions </div>
                 <div class="smallT w3-center w3-border-bottom">people around the world died each year of SCD. </div>
                 <br>                 
@@ -159,29 +174,27 @@ window.addEventListener("resize", function(){drawChart()});
                     Ref: Josephson and Wellens. Circulation 2004.</a>   
                 
             </div>
-            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile w3-center header smallT" >
-                <div id="clip">
-                <video autoplay loop width="100%">
-                        <source src="movie.mp4" type="video/mp4">
+            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile w3-center header smallT pink2" >
+                
+                <video autoplay loop>
+                        <source src="figures/p1/VF.mp4" type="video/mp4" style="width: 100%; height: auto">
                         
-                    </video>
-                              
-                </div>
-                   
+                </video>
+ 
             </div>
                 
-            </div>
+    </div>
     
 
-    <!--4Block-->
+    <!--5Block-->
     <div class="w3-cell-row block"> 
-            <div class="w3-btn next" onmouseover="next(4)"></div>
+            <div class="w3-btn next" onmouseover="next(5)"></div>
             <div class="w3-container w3-cell w3-cell-middle w3-padding tanBG w3-mobile header">
                 <div class="largeT w3-center">3 out of 4 </div>
                 <div class="smallT w3-center w3-border-bottom">SCDs are caused by coronary artery 
                     with and without acute MI.
                 </div>
-                <div class="smallerT text" style="text-align: justify">
+                <div class="smallerT text w3-padding" style="text-align: justify">
                 In an autopsy series of 1575 cases in Thailand, SCD was responsible for 44.7% of cases.
                 </div><br>
                 <a href="https://academic.oup.com/eurheartj/article/29/11/1418/637134" class="ref">
@@ -199,26 +212,20 @@ window.addEventListener("resize", function(){drawChart()});
                 
                 
 
-        <!--5Block-->
-        <div class="w3-cell-row block"> 
-                <div class="w3-btn next" onmouseover="next(5)"></div>
-                <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile header">
-                    <div class="largeT w3-center">CAD</div>
-                    <div class="smallT w3-center w3-border-bottom">can trigger SCD by...
+    <!--6Block-->
+    <div class="w3-cell-row block"> 
+            <div class="w3-btn next" onmouseover="next(6)"></div>
+                        
+            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile 
+            w3-center header smallT brownBG" >
+            Pathophysiology of life-threatening ventricular arrhythmias caused 
+            by coronary heart disease.
+            <img src="figures/p1/pathophysiology.png" style="max-height: 80vh">
+            <a href="http://circ.ahajournals.org/content/125/8/1043" class="ref" style="color: white">
+                Ref: Myerberg and Junttilia. Circulation 2015.</a>              
+            </div>
                     
-                    </div><br>
-                    <a href="http://circ.ahajournals.org/content/125/8/1043" class="ref">
-                        Ref: Myerberg and Junttilia. Circulation 2015.</a>
-                    
-                    
-                </div>
-                <div class="w3-container w3-cell w3-cell-middle w3-padding w3-mobile w3-center header smallT" >
-                    Pathophysiology of life-threatening ventricular arrhythmias caused by coronary heart disease.
-                    <img src="figures/p1/pathophysiology.png">
-                                  
-                    </div>
-                       
-                </div>
+            </div>
                     
 
 <!--end pointer div-->
