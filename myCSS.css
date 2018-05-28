@@ -6,22 +6,25 @@
 .smallerT {font-size: 2vmax}
 .tinyT {font-size: 16px}
 .text {font-family: 'Open Sans', sans-serif;}
-p, html {font-family: 'Open Sans', sans-serif;}
+body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 
 /*color*/
+.darkPink {background-color: #FE9575}
 .pink1 {background-color: #FEDBD0}
 .pink2 {background-color: #FEEAE6}
+.liBrown {background-color: #8d7973}
 .brownBG {background-color: #442C2E}
 .brownTxt {color:#442C2E}
-.greyBG {background-color: #E4E4E4}
-.blueBG {background-color: #b0eae6}
-.blueTxt {color: #b0eae6}
+.greyBG {background-color: #E7E7E7}
+.blueBG {background-color: #f3fcff}
+.blueTxt {color: #f3fcff}
+.green {background-color: #f6fdf1}
 
 /*border*/
 .brownBorder {border: #442C2E solid 0.5vw}
 .pinkBorder {border: #FEDBD0 solid 0.5vw}
 .greyBorder {border: #E4E4E4 solid 0.5vw}
-.blueBorder {border: #b0eae6 solid 0.5vw}
+.blueBorder {border: #f3fcff solid 0.5vw}
 
 /*slideShow*/
 .container {
@@ -33,21 +36,33 @@ p, html {font-family: 'Open Sans', sans-serif;}
     background: linear-gradient(to bottom right, #fedbd0 50%, #ffffff 50%);
     color: #442c2e;
   }
-  .leftCol {padding-top: 10vh;}
+  .leftCol {padding-top: 6vh;}
   .rightCol {
     position: absolute;
     top: 50vh;left: 50vw;padding: 1.5vw;}
+
+@media screen and (max-width: 768px) {
+    
+    .leftCol {padding: 1vh;}
+    .rightCol {padding: 1vh}
+    
+    }
       
 @media screen and (max-width: 600px) {
       .container {
           float: none;
           width: 100%;
+          min-height: auto;
+          margin: auto;
           background: #ffffff;
-              }
+            }
     .leftCol {background-color: #fedbd0; padding: 1vh;}
     .rightCol {background-color: #ffffff; position: static;
       text-align:center;padding: 1vh}
     i.noMobile {display: none}
+    .noMobile {display: none}
+    .smallerT {font-size: 16px;}
+    .ref {font-size: 10px;}
       }
 
 
@@ -70,7 +85,7 @@ p, html {font-family: 'Open Sans', sans-serif;}
 
 
 /*bottomBar*/
-.activeBtn {color: #FEDBD0}
+.activeBtn {color: #FE9575}
 
 /*pointer*/
 .pointer {
@@ -95,4 +110,13 @@ p, html {font-family: 'Open Sans', sans-serif;}
     color: #b5a3a3;
     font-size: 14px;
        }
+
+img {
+    max-height: 90vh
+}
+
+.chartWrap {
     
+    resize: both;
+    overflow: auto;
+}
