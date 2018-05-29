@@ -16,6 +16,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 .brownBG {background-color: #442C2E; color: #FE9575}
 .brownTxt {color:#442C2E}
 .greyBG {background-color: #E7E7E7}
+.greyTxt {color: #e7e7e7}
 .blueBG {background-color: #f3fcff}
 .blueTxt {color: #f3fcff}
 .green {background-color: #f6fdf1}
@@ -111,7 +112,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 
 .ref {
     color: #b5a3a3;
-    font-size: 14px;
+    font-size: 12px;
        }
 
 img {
