@@ -31,7 +31,7 @@
     // Create the data table.
     var data = google.visualization.arrayToDataTable(
     [
-      ['Etiologies', 'percentage',{ role: 'style' }, { role: 'annotation' }],  
+      ['Etiologies', 'incidence(%)',{ role: 'style' }, { role: 'annotation' }],  
       ['Brugada Syndrome', 63.5, '#f06292', 'Brugada S'],
       ['Early Repolarization Syndrome', 9.6, '#ba68c8','Early Repolarization S'],
       ['Long QT syndrome', 7.7,'#7986cb','Long QT Syndrome'],
@@ -40,7 +40,7 @@
     ]);
 
     // Set chart options
-    var options = {height: 500, width: 600, chartArea: {height: '80%', width: '85%'},
+    var options = {height: 500, chartArea: {height: '80%', width: '85%'},
         fontName: 'Open Sans', fontSize: "22",
         tooltip: {text: 'percentage'},
         hAxis: {title: 'Incidence (%)'}, vAxis: {textPosition: 'none'},	
@@ -177,7 +177,7 @@ window.addEventListener("resize", function(){drawChart()});
                 <div class="w3-content w3-border-bottom w3-mobile" style="line-height: 120%">
                     Etiologies of SCA survivors with structurally normal heart.</div>
                 <div class="w3-content smallerT w3- w3-mobile">Data from 52 SCA survivors in Thailand. 
-                <span class="w3-row w3-left w3-round w3-btn w3-border tinyT w3-mobile" onclick="location.reload()">refresh</span>
+                <span class="w3-row w3-left w3-round w3-btn w3-border tinyT" onclick="location.reload()">refresh</span>
                 </div>
                 <div id="barChart" class="w3-padding chartWrap w3-center w3-mobile">
                 </div>
