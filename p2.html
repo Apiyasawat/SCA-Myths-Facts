@@ -32,18 +32,19 @@
     var data = google.visualization.arrayToDataTable(
     [
       ['Etiologies', 'percentage',{ role: 'style' }, { role: 'annotation' }],  
-      ['Brugada Syndrome', 63.5, '#f06292', 'BrS'],
-      ['Early Repolarization Syndrome', 9.6, '#ba68c8','ERS'],
-      ['Long QT syndrome', 7.7,'#7986cb','LQTs'],
-      ['Idiopathic VF', 3.8,'#4db6ac','iVF'],
+      ['Brugada Syndrome', 63.5, '#f06292', 'Brugada S'],
+      ['Early Repolarization Syndrome', 9.6, '#ba68c8','Early Repolarization S'],
+      ['Long QT syndrome', 7.7,'#7986cb','Long QT Syndrome'],
+      ['Idiopathic VF', 3.8,'#4db6ac','idiopathic VF'],
       
     ]);
 
     // Set chart options
-    var options = {height: 600, width: 700, chartArea: {height: '80%', width: '100%'},
+    var options = {height: 500, width: 600, chartArea: {height: '80%', width: '85%'},
         fontName: 'Open Sans', fontSize: "22",
         tooltip: {text: 'percentage'},
-        hAxis: {title: 'Incidence (%)'}
+        hAxis: {title: 'Incidence (%)'}, vAxis: {textPosition: 'none'},	
+        legend: {position: 'none'}
         };
 
     // Instantiate and draw our chart, passing in some options.
@@ -151,9 +152,11 @@ window.addEventListener("resize", function(){drawChart()});
     <div class="w3-row block">
         <div class="w3-btn next" onmouseover="next(2)"></div>
         <div class="w3-row greyBorder">
-            <div class="w3-container w3-cell w3-center w3-mobile header mediumT w3-padding blueBG" style="line-height: 120%">
+            <div class="w3-container w3-cell w3-center w3-mobile header mediumT w3-padding blueBG" 
+            style="line-height: 120%">
             Causes of SCA in normal structural heart
-            <ul class="w3-ul w3-padding w3-mobile w3-hoverable header smallT w3-white">
+            <ul class="w3-ul w3-padding w3-mobile w3-hoverable header smallT w3-white" 
+            style="line-height: 120%">
                 <li>Long QT syndrome</li>
                 <li>Brugada syndrome</li>
                 <li>Wolff-Parkinson-White syndrome</li>
@@ -174,10 +177,9 @@ window.addEventListener("resize", function(){drawChart()});
                 <div class="w3-content w3-border-bottom w3-mobile" style="line-height: 120%">
                     Etiologies of SCA survivors with structurally normal heart.</div>
                 <div class="w3-content smallerT w3- w3-mobile">Data from 52 SCA survivors in Thailand. 
-                <span class="w3-row w3-left w3-round w3-btn w3-border tinyT" onclick="location.reload()">refresh</span>
+                <span class="w3-row w3-left w3-round w3-btn w3-border tinyT w3-mobile" onclick="location.reload()">refresh</span>
                 </div>
                 <div id="barChart" class="w3-padding chartWrap w3-center w3-mobile">
-                    
                 </div>
                  
                 <a href="https://www.ncbi.nlm.nih.gov/pubmed/23539928" class="ref">
@@ -201,7 +203,8 @@ window.addEventListener("resize", function(){drawChart()});
             </div>
         </div>
         <div class="w3-row w3-mobile text w3-topbar" style="line-height: 160%; font-size: 1.5em">
-            <div class="w3-container w3-padding-large w3-cell w3-mobile" style ="background-color: #f8f0f0; text-align: justify">
+            <div class="w3-container w3-padding-large w3-cell w3-mobile" 
+            style ="background-color: #faf9f3; text-align: justify">
                 Associated with syncope or SCA due to VF predominantly in young Asian male.
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large" 
@@ -210,7 +213,7 @@ window.addEventListener("resize", function(){drawChart()});
                 <b>Triggers</b> include fever, cocaine, alcohol, benzodiazepines, and hypokalemia. 
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large" 
-            style ="background-color: #faf9f3;text-align: justify">
+            style ="background-color: #f8f0f0;text-align: justify">
                 <b>High risk features: </b><br>
                 spontaneous coved type ECG, history of syncope, and prior cardiac arrest.
                 <div class="ref">
@@ -238,7 +241,7 @@ window.addEventListener("resize", function(){drawChart()});
         </div>
         <div class="w3-row w3-mobile text w3-topbar" style="line-height: 160%; font-size: 1.5em">
             <div class="w3-container w3-padding-large w3-cell w3-mobile" 
-            style ="background-color: #f8f0f0; text-align: justify">
+            style ="background-color: #faf9f3; text-align: justify">
                 More than 10 different types of genes involved in LQTs have been described.
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large" 
@@ -248,7 +251,7 @@ window.addEventListener("resize", function(){drawChart()});
                 hypoK, and hypoMg. 
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large" 
-            style ="background-color: #faf9f3;text-align: justify">
+            style ="background-color:#f8f0f0 ;text-align: justify">
                 <b>High risk features: </b><br>
                 QTc>470 ms, LQTs II & III, Hx of syncope or SCA.  
                 <div class="ref">
@@ -285,8 +288,51 @@ window.addEventListener("resize", function(){drawChart()});
                 </div>
                 </div>
             </div>  
-    
+
+    <!--6Block ERS SQTS-->
+    <div class="w3-row block">
+        <div class="w3-btn next" onmouseover="next(6)"></div>
+        <div class="w3-row w3-mobile">            
+            <div class="w3-container w3-padding w3-card-4 w3-cell w3-cell-middle 
+            w3-center w3-mobile w3-border-brown w3-rightbar">
+            <img src="">
+            <div class="w3-row header mediumT w3-padding w3-mobile w3-text-brown">
+            Early Repolarization Syndrome</div>    
+            
             </div>
+            <div class="w3-container w3-padding w3-card-4 w3-cell w3-cell-middle w3-center w3-mobile">
+            <img src="figures/p2/Brugada.png">
+            <div class="w3-row header mediumT w3-padding w3-mobile w3-text-brown">
+                Short QT Syndrome
+            </div>
+            </div>
+        </div>
+        
+        </div>  
+
+    <!--7Block CPVT iVF-->
+    <div class="w3-row block">
+        <div class="w3-btn next" onmouseover="next(6)"></div>
+        <div class="w3-row w3-mobile darkPBorder">
+        <div class="w3-container w3-center w3-padding w3-mobile header mediumT greyBG">
+            SCA in normal structural heart and normal resting ECG.
+        </div>            
+            <div class="w3-container w3-padding w3-cell w3-cell-middle 
+            w3-center w3-mobile">
+            <img src="">
+            <div class="w3-row header mediumT w3-padding w3-mobile w3-text-brown">
+            Catecholaminergic polymorphic VT (CPVT)</div>    
+            
+            </div>
+            <div class="w3-container w3-padding w3-cell w3-cell-middle w3-center w3-mobile">
+            <img src="figures/p2/Brugada.png">
+            <div class="w3-row header mediumT w3-padding w3-mobile w3-text-brown">
+                Idiopathic VF
+            </div>
+            </div>
+        </div>
+        
+        </div>  
 
     
     <!--xBlock-->
