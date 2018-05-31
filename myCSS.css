@@ -19,6 +19,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 .darkPink {background-color: #FE9575}
 .darkPTxt {color: #FE9575}
 .pink1 {background-color: #FEDBD0}
+.pinkTxt {color:#FEDBD0}
 .pink2 {background-color: #FEEAE6}
 .brownBG {background-color: #442C2E; color: #FE9575}
 .brownTxt {color:#442C2E}
@@ -28,6 +29,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 .blueTxt {color: #f3fcff}
 .green {background-color: #f6fdf1}
 .tanBG {background-color: #e7e5d5}
+.liBrown {background-color: #634043}
 
 /*border*/
 .brownBorder {border: #442C2E solid 0.5vw}
