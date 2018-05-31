@@ -22,8 +22,30 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 <style>
 
+.shake:hover {
+  animation: shake 0.4s;
+  animation-iteration-count: 0.4s;
+}
+.gvBorder {
+    border-bottom: 0.4vh rgb(87, 56, 59) groove;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 0px) rotate(1deg); }
+  30% { transform: translate(2px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-1px, 1px) rotate(0deg); }
+  70% { transform: translate(1px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 </style>
 
 <body>
@@ -49,32 +71,144 @@
         </div>
     </div>
 
-<div onclick="pointer()"><span class="pointer" style="display: none"></span>  
-        
-    <!--1Block-->
-    <div id="1Blk" class="w3-row block">
+    <div onclick="pointer()"><span class="pointer" style="display: none"></span>  
+      
+    <!--1Block OHCA -->
+    <div id="1Blk" class="w3-row block" style="background-color: #442C2E">
         <div class="w3-btn next" onmouseover="next(1)"></div>
-        <div class="w3-col s6 text w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-            Page 3 <br><br><br><br><br><br>
+        <div class="w3-panel w3-center header mediumT darkPTxt">
+            Outcomes of Out-of-Hospital Cardiac Arrest (OHCA)               
         </div>
-        <div class="w3-col s6 w3-center w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                Incidence of SCA
+
+        <div class="w3-row w3-center text tinyT">
+            <div class="w3-button w3-round w3-padding w3-center greyTxt liBrown" onclick="showData('NA')">North America Series</div>
+            <div class="w3-button w3-round w3-padding w3-center greyTxt liBrown" onclick="showData('Th')">Thailand</div>
+            <div class="w3-button w3-round w3-padding w3-center greyTxt liBrown" onclick="showData('LV')">Las Vegas Casino</div>
+        </div>
+
+        <div class="w3-row" style="padding: 2.5vh 1vw 2.5vh 1vw">
+        <div class="w3-col s6 w3-center ">
+                                 
+            <i class="fas fa-heartbeat shake" style="color: red;font-size: 9vw; 
+            border: transparent"></i>
+        </div>
+        <div class="w3-col s3 w3-center">
+            
+            <i class="fas fa-hospital shake" style="color:green;font-size: 9vw; 
+            border: transparent"></i>
+            
+            
+        </div>
+        <div class="w3-col s3 w3-center">
+            
+            <i class="fas fa-home shake" style="color:dodgerblue;font-size: 9vw; 
+            border: transparent"></i>
+            
+            
+            </div>
+        </div>
+        <div class="w3-row header smallT pinkTxt" style="padding: 2.5vh 1vw 2.5vh 1vw">
+            <div class="w3-col s3 w3-center">
+                Time to first ACLS
+            </div>
+            <div class="w3-col s3 w3-center">
+                Bystander CPR
+                </div>
+            <div class="w3-col s3 w3-center">
+                    Survival to hospital
+                </div>
+            <div class="w3-col s3 w3-center">
+                    Survival to home
+                </div>
+        </div>
+
+        <div id="NA" class="w3-row header smallerT" style="color: darkgrey; padding: 2.5vh 1vw 1vh 1vw">
+                <div class="w3-col s3 w3-center gvBorder ">
+                    5.9 mins (time to EMS arrival)
+                </div>
+                <div class="w3-col s3 w3-center gvBorder">
+                    40.1%
+                    </div>
+                
+                <div class="w3-col s3 w3-center gvBorder">
+                    62.8%
+                    </div>
+                <div class="w3-col s3 w3-center gvBorder">
+                    10.4%</div>
+        </div>
+            
+        <div id="Th" class="w3-row header smallerT" style="color: darkgrey; padding: 1vh 1vw 1vh 1vw">
+                <div class="w3-col s3 w3-center gvBorder">
+                    12mins (time to EMS arrival)
+                </div>
+                <div class="w3-col s3 w3-center gvBorder">
+                    27.4%
+                    </div>
+                
+                <div class="w3-col s3 w3-center gvBorder">
+                    61.5%
+                    </div>
+                <div class="w3-col s3 w3-center gvBorder">
+                    7.7%
+                </div>
             </div>
         
+        <div id="LV" class="w3-row header smallerT" style="color: darkgrey; padding: 1vh 1vw 1vh 1vw">
+                <div class="w3-col s3 w3-center gvBorder">
+                    4.4 mins (time to 1st defib) <br>
+                    9.8 mins (time to EMS arrival)
+                </div>
+                <div class="w3-col s3 w3-center gvBorder">
+                    43%
+                    </div>
+                
+                <div class="w3-col s3 w3-center gvBorder">
+                    89%
+                    </div>
+                <div class="w3-col s3 w3-center gvBorder">
+                    38%
+                </div>
+            </div>
+        <div class="w3-row w3-center ref">
+            Ref:
+            <a href="https://www.sciencedirect.com/science/article/pii/S0300957215000635?via%3Dihub">
+            1. Daya et al Resuscitation 2005,</a>
+            <a href="http://aph.sagepub.com/content/23/4/601">
+            2. Yeeheng U. Asia Pac J Public Health 2011, </a>
+            <a href="https://www.nejm.org/doi/full/10.1056/NEJM200010263431701">
+                3. Valenzuela et al. NEJM 2010. </a>
         </div>
-    
+    </div>  
+
+
     <!--2Block-->
     <div class="w3-row block">
             <div class="w3-btn next" onmouseover="next(2)"></div>
-            <div class="w3-col s6 w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                Incidence of SCA <br><br><br><br><br><br>
+            <div class="w3-col s6 w3-mobile w3-black header mediumT">
+                xx % never return to work
             </div>
             <div class="w3-col s6 w3-center w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
                     Incidence of SCA
                 </div>
                 
             </div>
-    </div>
+
+<!--end div pointer-->
+</div>
+
+<!--before bottom-->
+<div class="w3-row w3-center block header w3-mobile">
+    <a href="#top"><i title="to the TOP" class="fas fa-arrow-circle-up w3-hover-opacity 
+    smallT" style="color: #e5e5e5; border: transparent;text-align: center"></i></a>
+    <br>
+    <a href="https://www.facebook.com/HeartRhythmBox/" class="tinyT">
+        <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity w3-mobile" 
+        style="color:  #3B5998; border: transparent;"></i></a><strong>HeartRhythmBox&nbsp </strong>
+     <a href="https://apiyasawat.github.io/main/" class="tinyT">
+    <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity w3-mobile"
+    style="color: #fedbd0; border: transparent;"></i></a>
+    Our Collection
+</div>
 
 
 <!--bottom-->
@@ -82,13 +216,13 @@
         <a href="index.html" title="homepage" class="w3-btn fas fa-home brownTxt tinyT w3-btn"
             style="border: transparent;"></a>
         <a href="p2.html" title="back" class="w3-btn fas fa-angle-left brownTxt tinyT w3-btn"></a>
-        <a href="p1.html" title="#1" class="w3-btn">1</a>
-        <a href="p2.html" title="#2" class="w3-btn">2</a>
+        <a href="p1.html" title="#1" class="w3-btn noMobile">1</a>
+        <a href="p2.html" title="#2" class="w3-btn noMobile">2</a>
         <a href="p3.html" title="#3" class="w3-btn activeBtn">3</a>
-        <a href="p4.html" title="#4" class="w3-btn">4</a>
-        <a href="p5.html" title="#5" class="w3-btn">5</a>
-        <a href="p6.html" title="#6" class="w3-btn">6</a>
-        <a href="p7.html" title="#7" class="w3-btn">7</a>
+        <a href="p4.html" title="#4" class="w3-btn noMobile">4</a>
+        <a href="p5.html" title="#5" class="w3-btn noMobile">5</a>
+        <a href="p6.html" title="#6" class="w3-btn noMobile">6</a>
+        <a href="p7.html" title="#7" class="w3-btn noMobile">7</a>
         <a href="p4.html" title="next" class="w3-btn fas fa-angle-right brownTxt tinyT w3-btn"></a>
            
         <span>
@@ -110,7 +244,10 @@ window.addEventListener("keydown", function(event) {
         var p = document.getElementsByClassName("pointer");
         p[0].style.display = "none";}
     })
-    
+
+function showData(id) {
+   document.getElementById(id).style.color = "white"
+}
 </script>
 
     
