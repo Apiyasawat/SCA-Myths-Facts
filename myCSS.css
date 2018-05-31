@@ -117,7 +117,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
     100%{opacity: 1;}
     }
 
-.ref {
+a.ref {
     color: #b5a3a3;
     font-size: 12px;
        }
