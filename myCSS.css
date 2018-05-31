@@ -8,6 +8,13 @@
 .text {font-family: 'Open Sans', sans-serif;}
 body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 
+.dropCap {
+        float: left;
+        width: 5vmax;
+        font-size: 10vmax;
+        line-height: 80%;
+    }
+
 /*color*/
 .darkPink {background-color: #FE9575}
 .darkPTxt {color: #FE9575}
