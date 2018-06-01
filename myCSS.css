@@ -4,9 +4,9 @@
 .mediumT {font-size: 4.5vmax}
 .smallT {font-size: 3vmax}
 .smallerT {font-size: 2vmax}
-.tinyT {font-size: 16px}
+.tinyT {font-size: 1.1vmax}
 .text {font-family: 'Open Sans', sans-serif;}
-body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
+body, p, html {font-family: 'Abel', sans-serif; font-size: 16px}
 
 .dropCap {
         float: left;
@@ -25,7 +25,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 .brownTxt {color:#442C2E}
 .greyBG {background-color: #E7E7E7}
 .greyTxt {color: #e7e7e7}
-.blueBG {background-color: #f3fcff}
+.blueBG {background-color: #daf6ff}
 .blueTxt {color: #f3fcff}
 .green {background-color: #f6fdf1}
 .tanBG {background-color: #e7e5d5}
@@ -35,7 +35,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 .brownBorder {border: #442C2E solid 0.5vw}
 .pinkBorder {border: #FEDBD0 solid 0.5vw}
 .greyBorder {border: #E4E4E4 solid 0.5vw}
-.blueBorder {border: #f3fcff solid 0.5vw}
+.blueBorder {border: #daf6ff solid 0.5vw}
 .darkPBorder {border: #FE9575 solid 0.5vw}
 
 /*slideShow*/
@@ -73,9 +73,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
       text-align:center;padding: 1vh}
     i.noMobile {display: none}
     .noMobile {display: none}
-    .smallerT {font-size: 16px;}
-    
-   
+      
       }
 
 
@@ -121,7 +119,7 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 
 .ref, a.ref {
     color: #b5a3a3;
-    font-size: 11px;
+    font-size: 1vmax;
        }
 
 

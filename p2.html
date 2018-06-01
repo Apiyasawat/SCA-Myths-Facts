@@ -99,7 +99,7 @@ window.addEventListener("resize", function(){drawChart()});
 
     <div class="container header"> 
         <!--topBlk-->        
-        <div class="w3-row slide">
+        <div id="top" class="w3-row slide">
             <div class="w3-col s6 w3-center w3-mobile leftCol" style="font-size: 6vh">
                 <div class="smallT w3-text-grey">Myths|Facts #2</div>
                 <div class="mediumT" style="padding: 1vw;">
@@ -202,18 +202,18 @@ window.addEventListener("resize", function(){drawChart()});
             <img src="figures/p2/Brugada.png">
             </div>
         </div>
-        <div class="w3-row w3-mobile text w3-topbar" style="line-height: 160%; font-size: 1.5em">
+        <div class="w3-row w3-mobile text" style="line-height: 160%; font-size: 1.5em">
             <div class="w3-container w3-padding-large w3-cell w3-mobile" 
-            style ="background-color: #faf9f3; text-align: justify">
+            style ="background-color: #dedbc5; text-align: justify">
                 Associated with syncope or SCA due to VF predominantly in young Asian male.
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large w3-mobile" 
-            style ="background-color: #f3f1f1;text-align: justify; line-height: 140%">
+            style ="background-color: #d4d1b5;text-align: justify; line-height: 140%">
                 Typical ECG findings (Coved ST elevation in V1-V2) can be dynamic.<br><br>
                 <b>Triggers</b> include fever, cocaine, alcohol, benzodiazepines, and hypokalemia. 
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large w3-mobile" 
-            style ="background-color: #f8f0f0;text-align: justify">
+            style ="background-color: #cbc7a4;text-align: justify">
                 <b>High risk features: </b><br>
                 spontaneous coved type ECG, history of syncope, and prior cardiac arrest.
                 <div class="ref">
@@ -239,24 +239,25 @@ window.addEventListener("resize", function(){drawChart()});
             <img src="figures/p2/LQTs.png">
             </div>
         </div>
-        <div class="w3-row w3-mobile text w3-topbar" style="line-height: 160%; font-size: 1.5em">
+        <div class="w3-row w3-mobile text" style="line-height: 160%; font-size: 1.5em">
             <div class="w3-container w3-padding-large w3-cell w3-mobile" 
-            style ="background-color: #faf9f3; text-align: justify">
+            style ="background-color: #c1f0ff; text-align: justify">
                 More than 10 different types of genes involved in LQTs have been described.
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large" 
-            style ="background-color: #f3f1f1;text-align: justify; line-height: 140%">
+            style ="background-color: #a7eaff;text-align: justify; line-height: 140%">
                 <b>Triggers</b><br> include QT-prolonging medications 
                 (ie. TCAs, Quinolones, Macrolides, & etc.),
                 hypoK, and hypoMg. 
             </div>
             <div class="w3-container w3-cell w3-mobile w3-padding-large" 
-            style ="background-color:#f8f0f0 ;text-align: justify">
+            style ="background-color:#8ee3ff ;text-align: justify">
                 <b>High risk features: </b><br>
                 QTc>470 ms, LQTs II & III, Hx of syncope or SCA.  
                 <div class="ref">
-                    <a href="http://www.onlinejacc.org/content/early/2017/10/19/j.jacc.2017.10.054?_ga=2.254232589.464239245.1527639321-909899438.1509518611">
-                    2017 ACC VA/SCD Guidelines
+                    <a href="http://www.onlinejacc.org/content/early/2017/10/19/j.jacc.2017.10.054?_ga=2.254232589.464239245.1527639321-909899438.1509518611"
+                    class="ref">
+                    2017 ACC VA/SCD Guidelines 
                     </a>
                 </div>
             </div>
@@ -390,10 +391,10 @@ window.addEventListener("resize", function(){drawChart()});
     smallT" style="color: #e5e5e5; border: transparent;text-align: center"></i></a>
     <br>
     <a href="https://www.facebook.com/HeartRhythmBox/" class="tinyT">
-        <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity w3-mobile" 
+        <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity w3-mobile tinyT" 
         style="color:  #3B5998; border: transparent;"></i></a><strong>HeartRhythmBox&nbsp </strong>
      <a href="https://apiyasawat.github.io/main/" class="tinyT">
-    <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity w3-mobile"
+    <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity w3-mobile tinyT"
     style="color: #fedbd0; border: transparent;"></i></a>
     Our Collection
 </div>
@@ -414,7 +415,14 @@ window.addEventListener("resize", function(){drawChart()});
         <a href="p6.html" title="#6" class="w3-btn noMobile">6</a>
         <a href="p7.html" title="#7" class="w3-btn noMobile">7</a>
         <a href="p3.html" title="next" class="w3-btn fas fa-angle-right brownTxt tinyT w3-btn"></a>
-           
+        <span>
+            <a href="https://www.facebook.com/HeartRhythmBox/">
+                <i title="@HeartRhythmBox" class="fab fa-facebook tinyT w3-btn noMobile" 
+                style="color:  #3B5998; border: transparent;"></i></a>
+            <a href="https://apiyasawat.github.io/main/">
+            <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open brownTxt tinyT w3-btn noMobile"
+            style="border: transparent;"></i></a>
+        </span>   
         </div>
     
 
