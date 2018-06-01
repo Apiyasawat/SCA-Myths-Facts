@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
 <style>
 
 </style>
@@ -55,11 +56,14 @@
     <!--1Block-->
     <div id="1Blk" class="w3-row block">
         <div class="w3-btn next" onmouseover="next(1)"></div>
-        <div class="w3-col s6 text w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-            Page 4 <br><br><br><br><br><br>
+        <div class="w3-col s6 w3-padding w3-center w3-mobile w3-black header largeT">
+            Implantable Cardioverter-Defibrillator (ICD) is ...
         </div>
-        <div class="w3-col s6 w3-center w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                Incidence of SCA
+        <div class="w3-col s6 w3-center w3-black w3-mobile">
+            <div onclick="flip()" style="cursor: pointer;">
+                <img id="img1" onclick="flip(2,1)"  src="figures/p2/LQTs.png">
+                <img id="img2" onclick="flip(1,2)" src="figures/p2/WPW AF.png" style="display: none;">
+            </div>
             </div>
         
         </div>
@@ -67,14 +71,44 @@
     <!--2Block-->
     <div class="w3-row block">
             <div class="w3-btn next" onmouseover="next(2)"></div>
-            <div class="w3-col s6 w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                Incidence of SCA <br><br><br><br><br><br>
+            <div class="w3-col s6 w3-padding w3-center w3-mobile blueBG header mediumT">
+            ICD is extremely effective in terminating ventricular arrhythmias.
+
+
             </div>
-            <div class="w3-col s6 w3-center w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                    Incidence of SCA
+            <div class="w3-col s6 w3-center w3-black w3-mobile">
+            
+                <img id="img1" onclick="flip(2,1)"  src="figures/p2/LQTs.png">
+               
+            </div>
+            </div>
+    
+    <!--3Block-->
+    <div class="w3-row block">
+        <div class="w3-btn next" onmouseover="next(3)"></div>
+        <div class="w3-row w3-padding w3-center w3-mobile tanBG header mediumT">
+        Main Indications for ICD </div>
+        <div class="w3-row w3-mobile w3-center">
+            <div class="w3-col s3 w3-mobile header smallT" >
+                <div class="ICM" onclick="showContent(this.className)" 
+                style="line-height: 50%; padding-top: 5vh">
+                    <span class="w3-hover-opacity" style="cursor: pointer;">Ischemic CM <br>
+                        <i class="fas fa-angle-down" style="color: darkgoldenrod"></i>    
+                    </span></div>
+                <div class="ICM" style="visibility: hidden">
+                    LVEF <35%<br> NYHA II+
                 </div>
+
+
+            </div>    
+            <div class="w3-col s3 w3-mobile header smallT">non-ischemic CM</div>
+            <div class="w3-col s3 w3-mobile header smallT">Brugada</div> 
+            <div class="w3-col s3 w3-mobile header smallT">Hypertrophic CM</div> 
+        </div>    
+
+    </div>
                 
-            </div>
+        
 
 <!--xBlock-->
 <div class="w3-row block">
@@ -104,24 +138,38 @@
     <!--end div pointer-->
     </div>
 
+<!--before bottom-->
+<div class="w3-row w3-center block header w3-mobile">
+        <a href="#top"><i title="to the TOP" class="fas fa-arrow-circle-up w3-hover-opacity 
+        smallT" style="color: #e5e5e5; border: transparent;text-align: center"></i></a>
+        <br>
+        <a href="https://www.facebook.com/HeartRhythmBox/" class="tinyT">
+            <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity w3-mobile" 
+            style="color:  #3B5998; border: transparent;"></i></a><strong>HeartRhythmBox&nbsp </strong>
+         <a href="https://apiyasawat.github.io/main/" class="tinyT">
+        <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity w3-mobile"
+        style="color: #fedbd0; border: transparent;"></i></a>
+        Our Collection
+    </div>
+
 
 <!--bottom-->
     <div class="w3-bar w3-center w3-card-4 w3-bottom w3-border-top header brownTxt tinyT">
         <a href="index.html" title="homepage" class="w3-btn fas fa-home brownTxt tinyT w3-btn"
         style="border: transparent;"></a>
         <a href="p3.html" title="back" class="w3-btn fas fa-angle-left brownTxt tinyT w3-btn"></a>
-        <a href="p1.html" title="#1" class="w3-btn">1</a>
-        <a href="p2.html" title="#2" class="w3-btn">2</a>
-        <a href="p3.html" title="#3" class="w3-btn">3</a>
+        <a href="p1.html" title="#1" class="w3-btn noMobile">1</a>
+        <a href="p2.html" title="#2" class="w3-btn noMobile">2</a>
+        <a href="p3.html" title="#3" class="w3-btn noMobile">3</a>
         <a href="p4.html" title="#4" class="w3-btn activeBtn">4</a>
-        <a href="p5.html" title="#5" class="w3-btn">5</a>
-        <a href="p6.html" title="#6" class="w3-btn">6</a>
-        <a href="p7.html" title="#7" class="w3-btn">7</a>
+        <a href="p5.html" title="#5" class="w3-btn noMobile">5</a>
+        <a href="p6.html" title="#6" class="w3-btn noMobile">6</a>
+        <a href="p7.html" title="#7" class="w3-btn noMobile">7</a>
         <a href="p5.html" title="next" class="w3-btn fas fa-angle-right brownTxt tinyT w3-btn"></a>
            
         <span>
             <a href="https://www.facebook.com/HeartRhythmBox/">
-                <i title="@HeartRhythmBox" class="fab fa-facebook tinyT w3-btn" 
+                <i title="@HeartRhythmBox" class="fab fa-facebook tinyT w3-btn noMobile" 
                 style="color:  #3B5998; border: transparent;"></i></a>
             <a href="https://apiyasawat.github.io/main/">
             <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open brownTxt tinyT w3-btn noMobile"
@@ -138,7 +186,17 @@ window.addEventListener("keydown", function(event) {
         var p = document.getElementsByClassName("pointer");
         p[0].style.display = "none";}
     })
-    
+
+function flip(show, hide) {
+
+    document.getElementById("img"+show).style.display = "block";
+    document.getElementById("img"+hide).style.display = "none";
+}
+
+function showContent(name) {
+    var c = document.getElementsByClassName(name);
+    c[1].style.visibility = "visible";
+}
 </script>
 
     
