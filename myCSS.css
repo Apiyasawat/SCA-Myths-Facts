@@ -6,7 +6,7 @@
 .smallerT {font-size: 2vmax}
 .tinyT {font-size: 16px}
 .text {font-family: 'Open Sans', sans-serif;}
-body, p, html {font-family: 'Open Sans', sans-serif; font-size: 12px}
+body, p, html {font-family: 'Open Sans', sans-serif; font-size: 16px}
 
 .dropCap {
         float: left;
@@ -73,7 +73,9 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 12px}
       text-align:center;padding: 1vh}
     i.noMobile {display: none}
     .noMobile {display: none}
-      
+    .smallerT {font-size: 16px;}
+    a.ref {font-size: 9px;}
+   
       }
 
 
@@ -117,10 +119,11 @@ body, p, html {font-family: 'Open Sans', sans-serif; font-size: 12px}
     100%{opacity: 1;}
     }
 
-.ref {
+.ref, a.ref {
     color: #b5a3a3;
-    font-size: 12px;
+    font-size: 11px;
        }
+
 
 img {
     width: 100%;
