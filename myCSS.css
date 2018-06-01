@@ -4,7 +4,7 @@
 .mediumT {font-size: 4.5vmax}
 .smallT {font-size: 3vmax}
 .smallerT {font-size: 2vmax}
-.tinyT {font-size: 1.1vw}
+.tinyT {font-size: 1.1vmax}
 .text {font-family: 'Open Sans', sans-serif;}
 body, p, html {font-family: 'Abel', sans-serif; font-size: 16px}
 
@@ -73,7 +73,8 @@ body, p, html {font-family: 'Abel', sans-serif; font-size: 16px}
       text-align:center;padding: 1vh}
     i.noMobile {display: none}
     .noMobile {display: none}
-      
+    .tinyT {font-size: 12px}
+        
       }
 
 
