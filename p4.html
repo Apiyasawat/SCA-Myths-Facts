@@ -56,16 +56,21 @@
     <!--1Block-->
     <div id="1Blk" class="w3-row block">
         <div class="w3-btn next" onmouseover="next(1)"></div>
-        <div class="w3-col s6 w3-padding w3-center w3-mobile w3-black header largeT">
-            Implantable Cardioverter-Defibrillator (ICD) is ...
+        <div class="w3-row w3-black">            
+            <div class="w3-col s6 w3-padding w3-center w3-mobile header largeT">
+                Implantable Cardioverter-Defibrillator (ICD) is ...
+            </div>
+            <div class="w3-col s6 w3-center w3-mobile">
+                <div style="cursor: pointer;">
+                    <img id="img1" onclick="flip(2,1)"  src="figures/p4/dICD.png">
+                    <div id="img2" onclick="flip(1,2)" style="display: none" >
+                    <video autoplay loop >
+                        <source src="figures/p4/ICD clip.mp4" type="video/mp4">
+                    </video>
+                    <div class="w3-content w3-center tinyT w3-text-white">courtesy: Medmovie.com</div></div>    
+                </div>
+                </div>
         </div>
-        <div class="w3-col s6 w3-center w3-black w3-mobile">
-            <div onclick="flip()" style="cursor: pointer;">
-                <img id="img1" onclick="flip(2,1)"  src="figures/p2/LQTs.png">
-                <img id="img2" onclick="flip(1,2)" src="figures/p2/WPW AF.png" style="display: none;">
-            </div>
-            </div>
-        
         </div>
     
     <!--2Block-->

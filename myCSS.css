@@ -10,8 +10,8 @@ body, p, html {font-family: 'Abel', sans-serif; font-size: 16px}
 
 .dropCap {
         float: left;
-        width: 5vmax;
-        font-size: 10vmax;
+        width: 8vmax;
+        font-size: 16vmax;
         line-height: 80%;
     }
 
