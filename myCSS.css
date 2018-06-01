@@ -74,7 +74,8 @@ body, p, html {font-family: 'Abel', sans-serif; font-size: 16px}
     i.noMobile {display: none}
     .noMobile {display: none}
     .tinyT {font-size: 12px}
-    i.tinyT {font-size: 12px}    
+    i.tinyT {font-size: 12px}  
+    .smallerT {font-size: 2vh}  
       }
 
 
