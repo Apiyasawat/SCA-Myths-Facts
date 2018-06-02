@@ -26,7 +26,7 @@
 <style>
   .smallHolder {height:25vh; padding: 2vw; overflow: hidden;margin: 0.2vw; color: #634043;cursor: pointer;}
   .smallHolder:hover {opacity:0.8}
-  .largeHolder {display: none}
+  .largeHolder {display: none; width: 70vw; margin:auto}
   button {cursor: pointer;}
 </style>
 
@@ -99,39 +99,71 @@
           <div class="w3-row w3-center w3-text-grey w3-wide text smallT w3-mobile" style="padding-top: 20vh;line-height: 120%"> 
             ICD</div>
           <div class="w3-row w3-center header mediumT w3-wide w3-mobile">MAIN INDICATIONS</div>
-          <div class="w3-row w3-center tinyT w3-mobile">(click images below for more info or click here to 
+          <div class="w3-row w3-center tinyT w3-mobile noMobile">(click images below for more info or click here to 
               <button onclick="showContent(-1)" class="w3-border w3-center w3-round">show all</button>
               )</div>
-          <div class="w3-row smallerT header w3-mobile" style="padding-top: 2vh">
-            <div class="w3-col s1 smallHolder"></div>
-            <div class="w3-col s2 smallHolder pink2" onclick="showContent(0)"><img src="figures/p4/VF.png">
+          <div class="w3-row smallerT header w3-mobile noMobile" style="padding-top: 2vh; padding-bottom: 2vh">
+            <div class="w3-col s1 smallHolder w3-mobile"></div>
+            <div class="w3-col s2 smallHolder pink2 w3-mobile" onclick="showContent(0)"><img src="figures/p4/VF.png">
                 Post arrest
             </div>
-            <div class="w3-col s2 smallHolder pink2" onclick="showContent(1)"><img src="figures/p4/CAD.png">
+            <div class="w3-col s2 smallHolder pink2 w3-mobile" onclick="showContent(1)"><img src="figures/p4/CAD.png">
                 ICM</div>
-            <div class="w3-col s2 smallHolder pink2" onclick="showContent(2)">
+            <div class="w3-col s2 smallHolder pink2 w3-mobile" onclick="showContent(2)">
                 <video autoplay loop muted="muted"  style="width: 100%" >
                         <source src="figures/p4/DCM.mp4" type="video/mp4">
                     </video>
                 DCM</div>
-            <div class="w3-col s2 smallHolder pink2" onclick="showContent(3)">
+            <div class="w3-col s2 smallHolder pink2 w3-mobile" onclick="showContent(3)">
                     <video autoplay loop muted="muted"  style="width: 100%" >
                         <source src="figures/p4/HCM.mp4" type="video/mp4">
                         </video>
                 HCM</div>
-            <div class="w3-col s2 smallHolder pink2" onclick="showContent(4)">
+            <div class="w3-col s2 smallHolder pink2 w3-mobile" onclick="showContent(4)">
                 <img src="figures/p4/brugada.png">
                 Brugada</div>
             
           </div>
           
-            <div class="w3-row w3-center largeHolder w3-border">
-                Post Arrest                                    
+            <div class="w3-row w3-center largeHolder pink1 w3-mobile" style="margin-top: 4vh">
+                <div class="w3-col s4 w3-mobile">
+                <img src="figures/p4/VF.png"></div>
+                <div class="w3-col s8 w3-mobile w3-padding">
+                <div class="w3-row header mediumT brownTxt w3-padding w3-wide pink2"  style="line-height: 70%; 
+                text-align: justify; padding-top: 2vh">
+                    Post Arrest</div>   
+                <div class="w3-row header smallerT w3-text-grey" style="text-align: justify">
+                    from non-reversible causes </div> 
+                </div>                       
             </div>
-            <div class="w3-row largeHolder w3-border">
-                ICM         </div>
-            <div class="w3-row largeHolder w3-border">
-                DCM         </div>
+
+            <div class="w3-row w3-center largeHolder pink1 w3-mobile" style="margin-top: 4vh">
+                <div class="w3-col s4 w3-mobile">
+                <img src="figures/p4/CAD.png">
+                </div>
+                <div class="w3-col s8 w3-mobile w3-padding">
+                    <div class="w3-row w3-padding header mediumT brownTxt w3-wide pink2"  style="line-height: 90%; text-align: justify">
+                        Ischemic Cardiomyopathy</div>   
+                    <div class="w3-row header smallerT w3-text-grey" style="text-align: justify">
+                        LVEF less than 35%, NYHAII+ 
+                    </div>                       
+                </div>
+            </div>
+
+            <div class="w3-row w3-center largeHolder pink1 w3-mobile" style="margin-top: 4vh">
+                    <div class="w3-col s4 w3-mobile">
+                    <video autoplay loop muted="muted"  style="width: 100%" >
+                            <source src="figures/p4/DCM.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="w3-col s8 w3-mobile w3-padding">
+                        <div class="w3-row w3-padding header mediumT brownTxt w3-wide pink2"  style="line-height: 90%; text-align: justify">
+                            Dilated Cardiomyopathy</div>   
+                        <div class="w3-row header smallerT w3-text-grey" style="text-align: justify">
+                            LVEF less than 35%, NYHAII+ 
+                        </div>                       
+                    </div>
+                </div>
             <div class="w3-row largeHolder w3-border">
                         HCM         </div>
             <div class="w3-row largeHolder w3-border">
