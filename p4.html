@@ -24,9 +24,10 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 <style>
-  .smallHolder {height:20vh; padding: 2vw}
-  .smallHolder:hover {opacity:0.5}
-  .largeHolger {width: 40vh; height: 40vh}
+  .smallHolder {height:25vh; padding: 2vw; overflow: hidden;margin: 0.2vw; color: #634043;cursor: pointer;}
+  .smallHolder:hover {opacity:0.8}
+  .largeHolder {display: none}
+  button {cursor: pointer;}
 </style>
 
 <body>
@@ -59,7 +60,8 @@
     <div id="1Blk" class="w3-row block">
         <div class="w3-btn next" onmouseover="next(1)"></div>
         <div class="w3-row w3-black">            
-            <div class="w3-col s6 w3-padding w3-center w3-mobile header largeT">
+            <div class="w3-col s6 w3-center w3-mobile text mediumT"
+            style="padding: 3vh 1vw 3vw 1vw">
                 Implantable Cardioverter-Defibrillator (ICD) is ...
             </div>
             <div class="w3-col s6 w3-padding w3-center w3-mobile">
@@ -78,14 +80,14 @@
     <!--2Block VF ICD shock-->
     <div class="w3-row block">
             <div class="w3-btn next" onmouseover="next(2)"></div>
-            <div class="w3-col s6 w3-padding w3-center w3-mobile brownBG header mediumT">
+            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-center w3-mobile brownBG header mediumT">
             ICD is extremely effective in terminating ventricular arrhythmias.
 
 
             </div>
-            <div class="w3-col s6 w3-padding w3-center brownBG w3-mobile">
+            <div class="w3-container w3-cell w3-cell-middle w3-padding w3-center brownBG w3-mobile">
             
-                <img id="img1" onclick="flip(2,1)"  src="figures/p2/LQTs.png">
+                <img id="img1" src="figures/p4/ICD shock.png">
                
             </div>
             </div>
@@ -93,27 +95,48 @@
     <!--3Block ICD indications-->
     <div class="w3-row block">
         <div class="w3-btn next" onmouseover="next(3)"></div>
-        <div class="w3-row w3-padding w3-center w3-mobile w3-border" style="min-height: 95vh">
-          <div class="w3-row w3-center w3-text-dark-grey w3-wide text smallerT" style="padding-top: 30vh;line-height: 120%"> 
+        <div class="w3-row w3-padding w3-center w3-mobile w3-border w3-mobile" style="min-height: 95vh">
+          <div class="w3-row w3-center w3-text-grey w3-wide text smallT w3-mobile" style="padding-top: 20vh;line-height: 120%"> 
             ICD</div>
-          <div class="w3-row w3-center header mediumT">Main Indications</div>
-          <div class="w3-row w3-center tinyT">(click images below for more info)</div>
-          <div class="w3-row smallT">
-            <div class="w3-col s1 smallHolder w3-border"></div>
-            <div class="w3-col s2 smallHolder">
-              secondary prevention</div>
-            <div class="w3-col s2 smallHolder">ICM</div>
-            <div class="w3-col s2 smallHolder">DCM</div>
-            <div class="w3-col s2 smallHolder">HCM</div>
-            <div class="w3-col s2 smallHolder">Brugada</div>
+          <div class="w3-row w3-center header mediumT w3-wide w3-mobile">MAIN INDICATIONS</div>
+          <div class="w3-row w3-center tinyT w3-mobile">(click images below for more info or click here to 
+              <button onclick="showContent(-1)" class="w3-border w3-center w3-round">show all</button>
+              )</div>
+          <div class="w3-row smallerT header w3-mobile" style="padding-top: 2vh">
             <div class="w3-col s1 smallHolder"></div>
+            <div class="w3-col s2 smallHolder pink2" onclick="showContent(0)"><img src="figures/p4/VF.png">
+                Post arrest
+            </div>
+            <div class="w3-col s2 smallHolder pink2" onclick="showContent(1)"><img src="figures/p4/CAD.png">
+                ICM</div>
+            <div class="w3-col s2 smallHolder pink2" onclick="showContent(2)">
+                <video autoplay loop muted="muted"  style="width: 100%" >
+                        <source src="figures/p4/DCM.mp4" type="video/mp4">
+                    </video>
+                DCM</div>
+            <div class="w3-col s2 smallHolder pink2" onclick="showContent(3)">
+                    <video autoplay loop muted="muted"  style="width: 100%" >
+                        <source src="figures/p4/HCM.mp4" type="video/mp4">
+                        </video>
+                HCM</div>
+            <div class="w3-col s2 smallHolder pink2" onclick="showContent(4)">
+                <img src="figures/p4/brugada.png">
+                Brugada</div>
+            
           </div>
           
-          <div class="w3-row">
-            <div class="w3-row largeHolder w3-border style="display:none">
-                <span class="2P">SECONDARY</span>                                        
+            <div class="w3-row w3-center largeHolder w3-border">
+                Post Arrest                                    
             </div>
-          </div>
+            <div class="w3-row largeHolder w3-border">
+                ICM         </div>
+            <div class="w3-row largeHolder w3-border">
+                DCM         </div>
+            <div class="w3-row largeHolder w3-border">
+                        HCM         </div>
+            <div class="w3-row largeHolder w3-border">
+                    Brugada         </div>
+        
         </div>
    
     </div>
@@ -204,9 +227,19 @@ function flip(show, hide) {
     document.getElementById("img"+hide).style.display = "none";
 }
 
-function showContent(name) {
-    var c = document.getElementsByClassName(name);
-    c[1].style.display = "block"
+function showContent(n) {
+    var i;
+    var holder = document.getElementsByClassName("largeHolder");
+    if (n<0) {
+        for (i=0;i<holder.length;i++){
+            holder[i].style.display = "block";
+        }
+    } else {
+        for (i=0;i<holder.length;i++){
+            holder[i].style.display = "none";
+        }
+        holder[n].style.display = "block"
+    }
 }
 </script>
 
