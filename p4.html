@@ -27,10 +27,12 @@
   .smallHolder {height:25vh; padding: 2vw; overflow: hidden;margin: 0.2vw; color: #634043;cursor: pointer;}
   .smallHolder:hover {opacity:0.8}
   .largeHolder {display: none; width: 70vw; margin:auto}
-  .rBlk {display: none}
+  .rBlk {display: none; border-left: #fedbd0 solid 0.4vw}
+  .tip {display: none}
 
 @media screen and (max-width: 600px) {
-    .largeHolder, .rBlk {display: block}
+    .largeHolder, .rBlk {display: block; border-left: none; border-top: #fedbd0 solid 0.3vh;
+    padding: 2vh 0 2vh 0}
 }
 
 button {cursor: pointer;}
@@ -152,7 +154,7 @@ button {cursor: pointer;}
                     <div class="w3-row w3-padding header mediumT brownTxt w3-wide w3-mobile"  style="line-height: 90%; text-align: justify">
                         Ischemic Cardiomyopathy</div>   
                     <div class="w3-row header smallT w3-text-grey w3-padding w3-mobile w3-wide" style="text-align: justify">
-                        LVEF less than 35%, NYHAII+ 
+                        LVEF ≤35%, NYHAII+ 
                     </div>                       
                 </div>
             </div>
@@ -167,7 +169,7 @@ button {cursor: pointer;}
                         <div class="w3-row w3-padding header mediumT brownTxt w3-wide w3-mobile"  style="line-height: 90%; text-align: justify">
                             Dilated Cardiomyopathy</div>   
                         <div class="w3-row header smallT w3-text-grey w3-padding w3-mobile w3-wide" style="text-align: justify">
-                            LVEF less than 35%, NYHAII+ 
+                            LVEF ≤35%, NYHAII+ 
                         </div>                       
                     </div>
                 </div>
@@ -181,7 +183,7 @@ button {cursor: pointer;}
                         <div class="w3-row w3-padding header mediumT brownTxt w3-wide w3-mobile"  style="line-height: 90%; text-align: justify">
                             Hypertrophic Cardiomyopathy</div>   
                         <div class="w3-row header smallT w3-text-grey w3-padding w3-mobile" style="text-align: justify">
-                            LV wall thickness>30mm, syncope, NSVT, Family Hx, LGE+ on MRI 
+                            LV wall thickness >30mm, syncope, NSVT, Family Hx, LGE+ on MRI 
                         </div>                       
                     </div>
                 </div>
@@ -229,8 +231,10 @@ button {cursor: pointer;}
     <div class="w3-cell-row w3-padding w3-center w3-mobile w3-border w3-mobile" style="min-height: 95vh">
         <div class="w3-container w3-cell w3-cell-middle w3-mobile">
             <span class="text largeT pinkTxt w3-wide" style="font-weight: bold">SCD</span>
-            <span class="header largeT w3-text-grey" onclick="showrBlk(-1)">prevention</span>    
-            <div class="header smallerT" style="cursor: pointer;">
+            <span class="text largeT w3-text-grey" onclick="showrBlk(-1)">prevention</span>  <br>
+            <div class="w3-row w3-round w3-center w3-btn w3-border w3-tiny tinyT w3-hide-medium w3-hide-large" 
+                onclick="location.reload()">refresh</div>  
+            <div class="header smallerT noMobile" style="cursor: pointer;">
                 <span onclick="showrBlk(0)">Cigarettes</span> <span> | </span>
                 <span onclick="showrBlk(1)">Medications</span> <span> | </span>
                 <span onclick="showrBlk(2)">Fish Oil</span>
@@ -238,19 +242,90 @@ button {cursor: pointer;}
         </div>
         <div class="w3-container w3-cell w3-cell-middle w3-mobile">
             <div class="rBlk w3-animate-right header mediumT">
-                smoking kills
+                <div class="w3-row w3-mobile">
+                    <div class="w3-container w3-cell w3-cell-middle w3-mobile">
+                        <img src="figures/p4/cig.png">
+                    </div>
+                    <div class="w3-container w3-cell w3-cell-middle w3-mobile header smallT">
+                        <div class="w3-row w3-border-bottom">
+                            Smoking increases risk of SCD by 2.4 times.
+                        </div>
+                        <div class="w3-row">
+                            Risk of SCD is unrelated to the amount and duration of smoking. 
+                            The risk is normalized immediately after quitting.
+                        </div>
+                        <div class="ref">
+                            <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/216207">
+                            Goldenberg et al. Arch Intern Med 2003.</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="rBlk w3-animate-right header mediumT">
-                    Medications
+            <div class="rBlk w3-animate-right text smallerT">
+                <table class="w3-table w3-padding w3-bordered w3-centered w3-hoverable" style="margin: 0.5vw">
+                    <tr class="brownTxt" style="border-bottom: black solid 0.4vh">
+                        <th>Drugs</th>  <th>Possible Mechanisms</th>    <th>%SCD reduction</th>
+                    </tr>
+                    <tr>
+                        <td>Beta Blockers</td>  <td>decrease sympathetic tone, stabilize myocardium</td>
+                        <td>44% in <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(98)11181-9/fulltext">
+                            CIBIS-II</a></td>
+                    </tr>
+                    <tr>
+                        <td>Aldosterone Antagonist</td>  <td>reduce inflammation</td>
+                        <td>29% in <a href="https://www.nejm.org/doi/full/10.1056/nejm199909023411001">
+                            RALES</a></td>
+                    </tr>
+                    <tr>
+                        <td>ACEI/ARB</td>  <td>reduce electrical irritability</td>
+                        <td>20% in <a href="https://www.sciencedirect.com/science/article/pii/S0735109798006093?via%3Dihub">
+                            Meta-analysis</a></td>
+                    </tr>
+                    <tr>
+                        <td>Statin</td>  <td>stabilize plaques</td>
+                        <td>40% in <a href="https://www.sciencedirect.com/science/article/pii/S0735109703004984?via%3Dihub">
+                            AVID</a></td>
+                    </tr>
+                    <tr>
+                    <td>Amiodarone</td>  <td>-</td>
+                    <td>similar events with placebo in<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa043399">
+                        SCD-HeFT</a></td>
+                    </tr>
+                </table>
             </div>
-            <div class="rBlk w3-animate-right header mediumT">
-                Fish Oil
+            <div class="rBlk w3-animate-right">
+                <div class="w3-row">
+                <div class="w3-container w3-cell w3-cell-middle w3-mobile w3-padding">
+                    <img src="figures/p4/Fish Oil.jpg">
+                </div>
+                <div class="w3-container w3-cell w3-cell-middle w3-mobile w3-padding header smallT"
+                style="text-align: justify; line-height: 120%">
+                Treatment with omega-3 PUFA supplements is reasonable for the secondary prevention 
+                of CHD death, possibly through a reduction in ischemia induced SCD.(IIb-IIa)<br>
+                <div class="ref">
+                <a href="http://circ.ahajournals.org/content/early/2017/03/13/CIR.0000000000000482">
+                AHA Advisory</a> and
+                <a href="http://circ.ahajournals.org/content/early/2017/10/30/CIR.0000000000000549">
+                    2017 ACC VA/SCD Guidelines</a></div>
+                </div></div>
             </div>
         </div>
     </div>
 </div>
                 
-        
+<!--6Block diagram prevention-->
+<div id="5Blk" class="w3-row block" style="background-color: lightgray">
+    <div class="w3-btn next" onmouseover="next(5)"></div>
+    <div class="w3-panel w3-center w3-padding w3-mobile text mediumT">Strategy to Prevent SCD</div>
+    <div class="w3-content w3-center w3-padding w3-mobile header mediumT brownBorder pink2"
+    style="margin-top: 2vh; cursor: pointer;" onmouseover="showTip(0)" onmouseout="hideTip(0)">
+        Identify Substrate
+        <span class="tip smallT w3-border">LVEF, NYHA</span>
+    </div>
+    <div class="w3-row w3-center w3-padding smallT brownTxt">
+        <i class="fas fa-arrow-down" style="border: transparent"></i>
+    </div>
+</div>      
 
 <!--xBlock-->
 <!--div class="w3-row block">
@@ -335,6 +410,7 @@ function flip(show, hide) {
     document.getElementById("img"+hide).style.display = "none";
 }
 
+/*indication*/
 function showContent(n) {
     var i;
     var holder = document.getElementsByClassName("largeHolder");
@@ -352,15 +428,17 @@ function showContent(n) {
     }
 }
 
+/*prevention*/
 function showrBlk(n) {
     var i;
     var blk = document.getElementsByClassName("rBlk");
 
     if (n<0) {
         for (i=0;i<blk.length;i++){
-            blk[i].style.display = "none";    
-    }
-    } else {
+            blk[i].style.display = "none";} 
+        }
+  
+    else {
     for (i=0;i<blk.length;i++){
             blk[i].style.display = "none";
         }
@@ -368,6 +446,22 @@ function showrBlk(n) {
 
 }
 
+function showTip(n) {
+    var i;
+    var t = document.getElementsByClassName("tip");
+    for (i=0;i<t.length;i++){
+            t[i].style.display = "block";
+        }
+}
+
+function hideTip(n) {
+    var i;
+    var t = document.getElementsByClassName("tip");
+    for (i=0;i<t.length;i++){
+            t[i].style.display = "none";
+        }
+
+}
 </script>
 
     
