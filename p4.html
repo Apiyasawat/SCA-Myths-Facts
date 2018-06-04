@@ -28,7 +28,10 @@
   .smallHolder:hover {opacity:0.8}
   .largeHolder {display: none; width: 70vw; margin:auto}
   .rBlk {display: none; border-left: #fedbd0 solid 0.4vw}
-  .tip {display: none}
+  .tip {display: none; background-color: #feeae6}
+  .tipBox {background-color: #fedbd0}
+  .tipBox:hover {border: #634043 solid 0.3vw}
+  
 
 @media screen and (max-width: 600px) {
     .largeHolder, .rBlk {display: block; border-left: none; border-top: #fedbd0 solid 0.3vh;
@@ -314,16 +317,32 @@ button {cursor: pointer;}
 </div>
                 
 <!--6Block diagram prevention-->
-<div id="5Blk" class="w3-row block" style="background-color: lightgray">
+<div id="5Blk" class="w3-row block" style="background: linear-gradient(to bottom, #d3d3d3 0%, #ffffff 100%);">
     <div class="w3-btn next" onmouseover="next(5)"></div>
     <div class="w3-panel w3-center w3-padding w3-mobile text mediumT">Strategy to Prevent SCD</div>
-    <div class="w3-content w3-center w3-padding w3-mobile header mediumT brownBorder pink2"
-    style="margin-top: 2vh; cursor: pointer;" onmouseover="showTip(0)" onmouseout="hideTip(0)">
+    <div class="w3-content w3-center w3-padding w3-mobile header mediumT tipBox w3-wide"
+    style="margin-top: 4vh; cursor: pointer;" onmouseover="showTip(0)" onmouseout="hideTip(0)">
         Identify Substrate
-        <span class="tip smallT w3-border">LVEF, NYHA</span>
+        <span class="tip smallT header">LVEF, NYHA</span>
     </div>
     <div class="w3-row w3-center w3-padding smallT brownTxt">
         <i class="fas fa-arrow-down" style="border: transparent"></i>
+    </div>
+    <div class="w3-content w3-center w3-padding w3-mobile header mediumT tipBox w3-wide"
+    style="margin-top: 4vh; cursor: pointer;" onmouseover="showTip(1)" onmouseout="hideTip(1)">
+        Stabilize Triggers
+        <span class="tip smallT header">Smoking cessation, BB, ACEI, Statin, Aldosterone antagonist,
+            Normalize electrolytes, Reduce ischemia
+        </span>
+    </div>
+    <div class="w3-row w3-center w3-padding smallT brownTxt">
+        <i class="fas fa-arrow-down" style="border: transparent"></i>
+    </div>
+    <div class="w3-content w3-center w3-padding w3-mobile header mediumT tipBox w3-wide"
+    style="margin-top: 4vh; cursor: pointer; margin-bottom: 4vh" onmouseover="showTip(2)" onmouseout="hideTip(2)">
+        Intervene SCA
+        <span class="tip smallT header">ICD, AED, Increase public awareness of CPR
+        </span>
     </div>
 </div>      
 
@@ -447,21 +466,17 @@ function showrBlk(n) {
 }
 
 function showTip(n) {
-    var i;
     var t = document.getElementsByClassName("tip");
-    for (i=0;i<t.length;i++){
-            t[i].style.display = "block";
-        }
+    t[n].style.display = "block";
+    t[n].scrollIntoView({behavior: "smooth", block: "center"})
+    
 }
 
 function hideTip(n) {
-    var i;
+    
     var t = document.getElementsByClassName("tip");
-    for (i=0;i<t.length;i++){
-            t[i].style.display = "none";
-        }
-
-}
+    t[n].style.display = "none";
+    }
 </script>
 
     
