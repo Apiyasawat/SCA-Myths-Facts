@@ -12,7 +12,48 @@
 </script>
 
 <title>SCA Myths vs Facts #6</title>
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+  // Load the Visualization API and the corechart package.
+  google.charts.load('current', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Callback that creates and populates a data table,
+  // instantiates the pie chart, passes in the data and
+  // draws it.
+  function drawChart() {
+
+    // Create the data table.
+    var data = google.visualization.arrayToDataTable(
+    [
+      ['Populations', 'incidence(per million per year)',{ role: 'style' }, { role: 'annotation' }],  
+      ['General Population (10-75yr) during sports', 4.6, '#f06292', 'Gen Pop'],
+      ['Competitive young atheletes during sports', 9.6, '#ba68c8','Athletes'],
+      ['All SCAs', 530,'#7986cb','All SCAs'],
+      
+      
+    ]);
+
+    // Set chart options
+    var options = {height: 600, chartArea: {height: '80%', width: '85%'},
+        fontName: 'Open Sans', fontSize: "22",
+        tooltip: {text: 'percentage'},
+        hAxis: {title: 'Incidence (per million per year)'}, vAxis: {textPosition: 'none'},	
+        legend: {position: 'none'}
+        };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.BarChart(document.getElementById('Chart'));
+    chart.draw(data, options);
+  }
+window.addEventListener("resize", function(){drawChart()});
+</script>
 </head>
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
@@ -54,27 +95,65 @@
     <!--1Block-->
     <div id="1Blk" class="w3-row block">
         <div class="w3-btn next" onmouseover="next(1)"></div>
-        <div class="w3-col s6 text w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-            Page 6 <br><br><br><br><br><br>
-        </div>
-        <div class="w3-col s6 w3-center w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                Incidence of SCA
+        <div class="w3-container w3-mobile"> 
+            <div class="w3-row w3-center w3-padding header mediumT brownTxt">
+                Incidence of sports related SCAs
             </div>
+            <div class="w3-container w3-padding" id="Chart"></div>
+            <div class="ref w3-center">
+                <a href="http://circ.ahajournals.org/content/124/6/672">Marijon et al. Circulation 2011.</a>
+                and
+                <a href="http://www.acc.org/latest-in-cardiology/articles/2015/09/29/11/34/sudden-cardiac-arrest-during-sports-activity-in-middle-age">
+                Patil and Magalski. ACC Expert Analysis 2015. </a>
+            </div>
+        </div>
+
         
         </div>
     
     <!--2Block-->
     <div class="w3-row block">
             <div class="w3-btn next" onmouseover="next(2)"></div>
-            <div class="w3-col s6 w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                Incidence of SCA <br><br><br><br><br><br>
+            <div class="w3-container w3-cell w3-cell-middle w3-mobile pink1 smallT header w3-padding">
+                <ul class="w3-ul w3-hoverable">
+                    <li>Sports related SCA is rare.</li>
+                    <li>Much more common in men than women; ≈20:1</li>
+                    <li>Majority occurred during moderate to vigorous exercise (> 4METs)</li>
+                    <li>Risk is higher in those who rarely exercise.</li>
+                </ul>   
+                
             </div>
-            <div class="w3-col s6 w3-center w3-mobile" style="background-color: #Feeae6; font-size: 6vh;">
-                    Incidence of SCA
+            <div class="w3-container w3-cell w3-cell-middle w3-center w3-mobile pink1">
+                    <img src="figures/p6/incidence.png">
+                    <div class="ref w3-center">
+                    <a href="http://circ.ahajournals.org/content/124/6/672">Marijon et al. Circulation 2011.</a>
+                    and
+                    <a href="http://www.acc.org/latest-in-cardiology/articles/2015/09/29/11/34/sudden-cardiac-arrest-during-sports-activity-in-middle-age">
+                    Patil and Magalski. ACC Expert Analysis 2015. </a>
+                    </div> 
                 </div>
                 
             </div>
-    </div>
+    
+
+<!--end pointer div-->
+</div>
+    
+<!--before bottom-->
+<div class="w3-row w3-center block header w3-mobile">
+    <a href="#top"><i title="to the TOP" class="fas fa-arrow-circle-up w3-hover-opacity 
+    smallT" style="color: #e5e5e5; border: transparent;text-align: center"></i></a>
+    <div class="w3-center w3-mobile tinyT">        
+    <a href="https://www.facebook.com/HeartRhythmBox/">
+        <i title="@HeartRhythmBox" class="fab fa-facebook w3-hover-opacity" 
+        style="color:  #3B5998; border: transparent;"></i></a>
+        <span class="tinyT"><strong>HeartRhythmBox&nbsp&nbsp </strong></span>
+     <a href="https://apiyasawat.github.io/main/">
+    <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open w3-hover-opacity"
+    style="color: #fedbd0; border: transparent;"></i></a>
+    <span class="tinyT">Our Collection</span> </div>
+</div>
+
 
 
 <!--bottom-->
@@ -82,18 +161,18 @@
         <a href="index.html" title="homepage" class="w3-btn fas fa-home brownTxt tinyT w3-btn"
         style="border: transparent;"></a>
         <a href="p5.html" title="back" class="w3-btn fas fa-angle-left brownTxt tinyT w3-btn"></a>
-        <a href="p1.html" title="#1" class="w3-btn">1</a>
-        <a href="p2.html" title="#2" class="w3-btn">2</a>
-        <a href="p3.html" title="#3" class="w3-btn">3</a>
-        <a href="p4.html" title="#4" class="w3-btn">4</a>
-        <a href="p5.html" title="#5" class="w3-btn">5</a>
+        <a href="p1.html" title="#1" class="w3-btn noMobile">1</a>
+        <a href="p2.html" title="#2" class="w3-btn noMobile">2</a>
+        <a href="p3.html" title="#3" class="w3-btn noMobile">3</a>
+        <a href="p4.html" title="#4" class="w3-btn noMobile">4</a>
+        <a href="p5.html" title="#5" class="w3-btn noMobile">5</a>
         <a href="p6.html" title="#6" class="w3-btn activeBtn">6</a>
-        <a href="p7.html" title="#7" class="w3-btn">7</a>
+        <a href="p7.html" title="#7" class="w3-btn noMobile">7</a>
         <a href="p7.html" title="next" class="w3-btn fas fa-angle-right brownTxt tinyT w3-btn"></a>
            
         <span>
             <a href="https://www.facebook.com/HeartRhythmBox/">
-                <i title="@HeartRhythmBox" class="fab fa-facebook tinyT w3-btn" 
+                <i title="@HeartRhythmBox" class="fab fa-facebook tinyT w3-btn noMobile" 
                 style="color:  #3B5998; border: transparent;"></i></a>
             <a href="https://apiyasawat.github.io/main/">
             <i title="Heart Rhythm Box - Main Page" class="fas fa-box-open brownTxt tinyT w3-btn noMobile"
