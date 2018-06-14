@@ -69,7 +69,11 @@ window.addEventListener("resize", function(){drawChart()});
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
 <style>
+.thai {font-family: 'Kanit', sans-serif;}
+.thaiB {font-family: 'Kanit', sans-serif; font-weight: 900}
+
 
 </style>
 
@@ -78,20 +82,19 @@ window.addEventListener("resize", function(){drawChart()});
     <div class="container header"> 
         <!--topBlk-->        
         <div id="top" class="w3-row slide">
-                <div class="w3-col s6 w3-center w3-mobile leftCol" style="font-size: 6vh">
-                    <div class="smallT w3-text-grey">Myths|Facts #1</div>
-                    <div class="mediumT" style="padding: 1vw; font-weight: 700">
-                        Sudden Cardiac Arrest</div>
-                    <div class="mediumT"> is not the same as Heart Attack.</div>
-                  
-                </div>
-                <div class="w3-col s6 largeT w3-mobile rightCol" style="text-align: center">
-                    I know...but <br>
-                    <div> <a href="#1Blk" 
-                    class="w3-btn w3-round pink2 text smallerT">Tell me more</a></div>
-                </div>
-                   
+            <div class="w3-col s6 w3-center w3-mobile leftCol" style="font-size: 6vh">
+                <div class="smallT w3-text-grey" style="line-height: 120%">Myths|Facts #1</div>
+                <div class="mediumT thai" style="padding: 1vw; font-weight: 700">
+                    Sudden Cardiac Arrest</div>
+                <div class="smallT thai"> ก็คล้ายๆกับ heart attack รึป่าว</div>
+              
             </div>
+            <div class="w3-col s6 w3-mobile rightCol" style="text-align: center">
+                <a href="#1Blk" title="Myth&Fact#1" class="w3-btn w3-round pink2 thai smallT">
+                    ไม่ใช่มั้ง</a>
+            </div>
+               
+        </div>
     </div>
 
 <div onclick="pointer()"><span class="pointer" style="display: none"></span>  
@@ -200,8 +203,9 @@ window.addEventListener("resize", function(){drawChart()});
                 <div class="smallT w3-center w3-border-bottom">SCDs are caused by coronary artery 
                     with and without acute MI.
                 </div>
-                <div class="smallerT text w3-padding" style="text-align: justify">
-                In an autopsy series of 1575 sudden unexpected deaths in Thailand, CAD was responsible for 44.7% of cases.
+                <div class="smallerT text w3-padding thai" style="text-align: justify">
+                ในการศึกษาผลการชัณสูตรศพผู้เสียชีวิตกะทันหัน 1575 คน จากโรงพยาบาลรามาธิบดี พบว่า coronary artery diseases 
+                เป็นสาเหตุของการเสียชีวิตร้อยละ 44.7
                 </div><br>
                 <a href="https://academic.oup.com/eurheartj/article/29/11/1418/637134" class="ref">
                     Ref: Byrne et al. Eur H Journal 2008 &</a>
@@ -256,17 +260,17 @@ window.addEventListener("resize", function(){drawChart()});
 <!--bottom-->
     <div class="w3-bar w3-center w3-card-4 w3-bottom w3-border-top header brownTxt tinyT">
         
-        <a href="index.html" title="homepage" class="w3-btn fas fa-home brownTxt tinyT w3-btn"
+        <a href="thai.html" title="homepage-Thai" class="w3-btn fas fa-home brownTxt tinyT w3-btn"
         style="border: transparent;"></a>
-        <a href="p7.html" title="back" class="w3-btn fas fa-angle-left brownTxt tinyT w3-btn"></a>
-        <a href="p1.html" title="#1" class="w3-btn activeBtn">1</a>
-        <a href="p2.html" title="#2" class="w3-btn noMobile">2</a>
-        <a href="p3.html" title="#3" class="w3-btn noMobile">3</a>
-        <a href="p4.html" title="#4" class="w3-btn noMobile">4</a>
-        <a href="p5.html" title="#5" class="w3-btn noMobile">5</a>
-        <a href="p6.html" title="#6" class="w3-btn noMobile">6</a>
-        <a href="p7.html" title="#7" class="w3-btn noMobile">7</a>
-        <a href="p2.html" title="next" class="w3-btn fas fa-angle-right brownTxt tinyT w3-btn"></a>
+        <a href="p7thai.html" title="back" class="w3-btn fas fa-angle-left brownTxt tinyT w3-btn"></a>
+        <a href="p1thai.html" title="#1" class="w3-btn activeBtn">1</a>
+        <a href="p2thai.html" title="#2" class="w3-btn noMobile">2</a>
+        <a href="p3thai.html" title="#3" class="w3-btn noMobile">3</a>
+        <a href="p4thai.html" title="#4" class="w3-btn noMobile">4</a>
+        <a href="p5thai.html" title="#5" class="w3-btn noMobile">5</a>
+        <a href="p6thai.html" title="#6" class="w3-btn noMobile">6</a>
+        <a href="p7thai.html" title="#7" class="w3-btn noMobile">7</a>
+        <a href="p2thai.html" title="next" class="w3-btn fas fa-angle-right brownTxt tinyT w3-btn"></a>
            
         <span>
             <a href="https://www.facebook.com/HeartRhythmBox/">
