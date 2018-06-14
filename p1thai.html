@@ -100,12 +100,14 @@ window.addEventListener("resize", function(){drawChart()});
 <div onclick="pointer()"><span class="pointer" style="display: none"></span>  
         
     <!--1Block-->
-    <div id="1Blk" class="w3-cell-row block greyBorder greyBG w3-mobile">
+    <div id="1Blk" class="w3-cell-row block greyBorder w3-mobile" style="background-color: #fedbd0">
         <div class="w3-content w3-btn next" onmouseover="next(1)"></div>
-            <div class="w3-container w3-cell w3-cell-middle w3-center w3-mobile w3-padding">
-            <img src="figures/p1/apple_orange_poster.jpg" style="width: auto; height: 90vh">
+        <div class="w3-col w3-container s1"></div>
+            <div class="w3-col s4 w3-center w3-mobile w3-padding">
+            <img src="figures/p1/apple_orange_poster.jpg" style="width: 100%">
             </div>
-            <div class="w3-container w3-cell w3-cell-middle w3-mobile pink2" 
+            
+            <div class="w3-col s6 w3-mobile w3-padding" 
             style="padding: 0vh 2vw 0vw 2vw">
                 <div class="header largeT brownTxt w3-mobile" style="text-align: center; 
                 line-height: 110%; padding-bottom: 3vh">
